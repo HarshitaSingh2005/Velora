@@ -1,0 +1,25 @@
+<section class="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="review">
+    <p>"Best coffee in town! The latte art is amazing."</p>
+    <span>- Alice K.</span>
+  </div>
+  <div class="review">
+    <p>"Friendly staff and cozy ambiance. Highly recommend the cappuccino."</p>
+    <span>- Raj P.</span>
+  </div>
+</section>
+
+<!-- Optional review submission -->
+<form id="review-form">
+  <input type="text" placeholder="Your Name" required>
+  <textarea placeholder="Your Review" required></textarea>
+  <button type="submit">Submit Review</button>
+</form>
+
+<script>
+document.getElementById('review-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert("Thank you for your review!");
+});
+</script>

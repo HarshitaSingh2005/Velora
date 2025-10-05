@@ -1,0 +1,23 @@
+<section class="subscription">
+  <h2>Monthly Coffee Subscription</h2>
+  <form id="subscription-form">
+    <label>Name:</label>
+    <input type="text" required><br>
+    <label>Email:</label>
+    <input type="email" required><br>
+    <label>Plan:</label>
+    <select>
+      <option value="basic">Basic - 2 bags/month</option>
+      <option value="standard">Standard - 4 bags/month</option>
+      <option value="premium">Premium - 8 bags/month</option>
+    </select><br>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<script>
+document.getElementById('subscription-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert("Thank you for subscribing! We'll deliver your coffee soon ☕");
+});
+</script>

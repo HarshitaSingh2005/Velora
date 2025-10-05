@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Coffee Experience</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <a-sky src="images/cafe-360.jpg" rotation="0 -90 0"></a-sky>
+    <a-box position="0 1 -3" rotation="0 45 0" color="#6f4e37"
+           depth="0.5" height="0.5" width="0.5"
+           event-set__click="_event: click; color: #ff0000"></a-box>
+    <a-camera position="0 1.6 0"></a-camera>
+  </a-scene>
+</body>
+</html>

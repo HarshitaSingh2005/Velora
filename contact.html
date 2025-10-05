@@ -1,0 +1,20 @@
+<section class="reservation">
+  <h2>Reserve Your Table</h2>
+  <form id="reservation-form">
+    <label>Name:</label>
+    <input type="text" required><br>
+    <label>Date & Time:</label>
+    <input type="datetime-local" required><br>
+    <label>Guests:</label>
+    <input type="number" min="1" max="20" required><br>
+    <button type="submit">Reserve</button>
+  </form>
+</section>
+
+<script>
+document.getElementById('reservation-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert("Reservation successful! Check your email for confirmation.");
+  // Google Calendar API integration can be added here for automatic calendar event creation
+});
+</script>
