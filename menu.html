@@ -1,14 +1,60 @@
-<section class="coffee-menu">
-    <h2>Pick Your Coffee</h2>
-    <select id="coffee-type">
-        <option value="espresso">Espresso</option>
-        <option value="latte">Latte</option>
-        <option value="cappuccino">Cappuccino</option>
-        <option value="americano">Americano</option>
-        <option value="mocha">Mocha</option>
-    </select>
-    <button onclick="recommendCoffee()">Get AI Recommendation</button>
-    <p id="recommendation"></p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velora Coffee Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<script src="js/main.js"></script>
+  <header>
+    <div class="logo">Velora</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="coffee-menu">
+    <h2>Pick Your Coffee</h2>
+    
+    <!-- Coffee Options -->
+    <div class="coffee-options">
+      <div class="coffee-card" data-coffee="Espresso">
+        <h3>Espresso</h3>
+        <p>Price: $2.50</p>
+        <button class="recommend-btn">Get AI Recommendation</button>
+      </div>
+      <div class="coffee-card" data-coffee="Latte">
+        <h3>Latte</h3>
+        <p>Price: $3.50</p>
+        <button class="recommend-btn">Get AI Recommendation</button>
+      </div>
+      <div class="coffee-card" data-coffee="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Price: $3.00</p>
+        <button class="recommend-btn">Get AI Recommendation</button>
+      </div>
+      <div class="coffee-card" data-coffee="Americano">
+        <h3>Americano</h3>
+        <p>Price: $2.80</p>
+        <button class="recommend-btn">Get AI Recommendation</button>
+      </div>
+      <div class="coffee-card" data-coffee="Mocha">
+        <h3>Mocha</h3>
+        <p>Price: $3.70</p>
+        <button class="recommend-btn">Get AI Recommendation</button>
+      </div>
+    </div>
+
+    <div id="recommendation" style="margin-top:20px; font-size:18px; color:#6f4e37;"></div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* ===== Global Styles ===== */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6e3;
+    color: #333;
+}
+
+/* ===== Header / Navbar ===== */
+header {
+    background: #6f4e37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: #fff;
+    color: #6f4e37;
+    border-radius: 5px;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    height: 300px;
+    background-image: url('../images/hero-coffee.jpg'); /* replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* ===== Coffee Menu Section ===== */
+.coffee-menu {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#coffee-search {
+    padding: 8px 12px;
+    width: 300px;
+    max-width: 90%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.coffee-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.coffee-card {
+    width: 160px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.coffee-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.coffee-card h3 {
+    margin: 10px 0 5px;
+    color: #6f4e37;
+}
+
+.coffee-card p {
+    color: #444;
+    font-weight: bold;
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #6f4e37;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .coffee-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

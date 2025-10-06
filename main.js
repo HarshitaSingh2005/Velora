@@ -1,11 +1,25 @@
-function recommendCoffee() {
-    const coffee = document.getElementById('coffee-type').value;
-    const recommendations = {
-        espresso: "Try our bold dark roast espresso shot!",
-        latte: "A creamy latte with a hint of vanilla is perfect for you.",
-        cappuccino: "Our frothy cappuccino will lift your spirits.",
-        americano: "A smooth americano, light and refreshing!",
-        mocha: "Sweet chocolate mocha, a treat for your taste buds."
-    };
-    document.getElementById('recommendation').innerText = recommendations[coffee];
-}
+// Select all buttons
+const buttons = document.querySelectorAll(".recommend-btn");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", async () => {
+    const coffee = btn.parentElement.dataset.coffee;
+    const recommendationDiv = document.getElementById("recommendation");
+
+    recommendationDiv.innerText = "Loading recommendation...";
+
+    try {
+      const response = await fetch("http://localhost:3000/recommend", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ coffee })
+      });
+
+      const data = await response.json();
+      recommendationDiv.innerText = `AI Suggestion for ${coffee}: ${data.recommendation}`;
+    } catch (err) {
+      console.error(err);
+      recommendationDiv.innerText = "Error getting recommendation!";
+    }
+  });
+});

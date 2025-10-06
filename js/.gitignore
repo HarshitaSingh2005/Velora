@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Package lock (optional, can be ignored if not needed)
+package-lock.json
+
+# Build / output folders
+dist/
+build/
+
+# VS Code settings
+.vscode/

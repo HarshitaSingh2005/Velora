@@ -27,8 +27,7 @@ header .logo {
 }
 /* ===== Navbar ===== */
 .navbar {
-  width: 100%;                 /* full width across screen */
-  background-color: #f5f0e1;   /* cream background */
+  width: 100%;    /* cream background */
   padding: 10px 0;
 }
 
@@ -36,7 +35,6 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-
   display: flex;               
   justify-content: center;     
   align-items: center;         
@@ -46,21 +44,23 @@ nav ul {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #333;
+  color: #d8dcd8;
   font-size: 18px;
   padding: 8px 12px;
   transition: background 0.3s;
+  background-color: #fdf6e3;
 }
 
 .navbar ul li a:hover {
-  background: #ddd;
+  background: #d8dcd8;
   border-radius: 5px;
 }
 
 
 /* ===== Hero Section ===== */
 .hero {
-    height: 500px; 
+    height:500px; 
+    width:100%;
     background-image: url('../c1.jpg'); /* image must be in same folder as CSS */
     background-size: cover;
     background-position: center;
@@ -81,7 +81,7 @@ nav ul {
 .hero-text p {
   font-size: 20px;
   color: #715A5A;
-  padding: 50px;
+ /* padding: 50px;*/
    font-family: 'Poppins';
 
 }
@@ -106,32 +106,31 @@ nav ul {
   color: #6f4e37;
   margin-bottom: 40px;
 }
-
 .coffee-row {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-wrap: wrap;          /* ✅ allows wrapping */
+  justify-content: center;  /* ✅ centers cards */
+  gap: 20px;                /* ✅ spacing between cards */
 }
-
 .coffee-card {
+  flex: 1 1 200px;   /* ✅ each card at least 200px, will shrink/grow */
+  max-width: 220px;  /* ✅ keeps cards from being too wide */
   background: #fff;
   padding: 20px;
-  width: 200px;
   border-radius: 15px;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.coffee-card:hover {
-  transform: translateY(-5px);
 }
 
 .coffee-card img {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
   border-radius: 12px;
+}
+
+.coffee-card:hover {
+  transform: translateY(-5px);
 }
 
 .coffee-card h3 {
