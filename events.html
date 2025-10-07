@@ -1,19 +1,69 @@
-<section class="events">
-  <h2>Upcoming Workshops</h2>
-  <form id="workshop-form">
-    <label>Name:</label>
-    <input type="text" required><br>
-    <label>Email:</label>
-    <input type="email" required><br>
-    <label>Date:</label>
-    <input type="date" required><br>
-    <button type="submit">Register</button>
-  </form>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Workshop</title>
+  <link rel="stylesheet" href="styleevent.css">
+</head>
+<body>
 
-<script>
-document.getElementById('workshop-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert("You are registered for the workshop! ☕");
-});
-</script>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Workshop Section -->
+  <section class="event">
+    <div class="glass-card">
+      <h2>Upcoming Workshops</h2>
+      <form id="workshop-form">
+        <label>Name:</label>
+        <input type="text" id="name" required><br>
+        <label>Email:</label>
+        <input type="email" id="email" required><br>
+        <label>Date:</label>
+        <input type="date" id="date" required><br>
+        <button type="submit">Register</button>
+      </form>
+
+      <!-- Registrations will appear here -->
+      <div id="registration-list"></div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('workshop-form');
+    const registrationList = document.getElementById('registration-list');
+    const registrations = [];
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const date = document.getElementById('date').value;
+
+      registrations.push({ name, email, date });
+
+      registrationList.innerHTML = '';
+      registrations.forEach((reg, index) => {
+        const div = document.createElement('div');
+        div.textContent = `${index + 1}. ${reg.name} | ${reg.email} | ${reg.date}`;
+        div.style.padding = "5px 0";
+        div.style.borderBottom = "1px solid rgba(255,255,255,0.2)";
+        registrationList.appendChild(div);
+      });
+
+      form.reset();
+      alert("You are registered for the workshop! ☕");
+    });
+  </script>
+
+</body>
+</html>

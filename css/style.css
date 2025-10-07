@@ -59,17 +59,20 @@ nav ul {
 
 /* ===== Hero Section ===== */
 .hero {
-    height:500px; 
-    width:100%;
     background-image: url('../c1.jpg'); /* image must be in same folder as CSS */
+     height: 1000px; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex; 
+    align-items: center;         /* vertical center */
+    justify-content: flex-end;   /* push content to right */
+    padding-right: 50px;    
 }
 
 .hero-text {
   max-width: 850px;
-  text-align: auto;
+  text-align: left;
 }
 
 .hero-text h1 {

@@ -1,0 +1,123 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('Ce.jpg') no-repeat center center/cover; /* Background image */
+  color: #181717;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  background-color: #6f4e37;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #f2f8f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background-color: #d8dcd8;
+  border-radius: 5px;
+  color: #6f4e37;
+}
+
+/* ===== Workshop Section (Glass Card) ===== */
+.event {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #3e2723;
+}
+
+.glass-card h2 {
+  color: #120505;
+  margin-bottom: 20px;
+}
+
+.glass-card form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #181515;
+  font-weight: 600;
+}
+
+.glass-card form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: #3e2723;
+}
+
+.glass-card button {
+  background-color: #ffcc66;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.glass-card button:hover {
+  background-color: #ffb300;
+}
+
+/* Registration list styling */
+#registration-list {
+  margin-top: 20px;
+  text-align: left;
+  color: #000000;
+}
+
+#registration-list div {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+  .glass-card {
+    width: 90%;
+    padding: 20px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
