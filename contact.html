@@ -1,20 +1,112 @@
-<section class="reservation">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Velora</title>
+  <link rel="stylesheet" href="stylecontact.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Velora</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="brewing.html">Brewing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="extras.html">Extras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="Contact">
+    <div class="Contact-text">
+      <h1>CONTACT US</h1>
+    </div>
+  </section>
+
+  <!-- HERO / CONTACT INFO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>We’d love to hear from you!</h1>
+      <p>Whether you have a question, feedback, or just want to say hello — reach out to us anytime.</p>
+
+      <p><strong>📍 Address:</strong> 123 Brew Street, Coffeeville</p>
+      <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+      <p><strong>✉️ Email:</strong> <a href="mailto:hello@virtualcoffee.com">hello@virtualcoffee.com</a></p>
+
+      <p>You can also follow us on our socials to stay updated on new brews, offers, and events!</p>
+
+      <p>☕ Open daily from 8 AM to 10 PM</p>
+      <p>Let’s share a cup of happiness together!</p>
+    </div>
+  </section>
+
+  <!-- RESERVATION SECTION -->
+ <section class="reservation">
   <h2>Reserve Your Table</h2>
   <form id="reservation-form">
     <label>Name:</label>
-    <input type="text" required><br>
+    <input type="text" placeholder="Your Name" required><br>
     <label>Date & Time:</label>
     <input type="datetime-local" required><br>
     <label>Guests:</label>
     <input type="number" min="1" max="20" required><br>
     <button type="submit">Reserve</button>
   </form>
+
+  <h3>Your Reservations</h3>
+  <ul id="reservation-list"></ul>
 </section>
 
 <script>
-document.getElementById('reservation-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert("Reservation successful! Check your email for confirmation.");
-  // Google Calendar API integration can be added here for automatic calendar event creation
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("reservation-form");
+  const list = document.getElementById("reservation-list");
+
+  // Show saved reservations on load
+  const saved = JSON.parse(localStorage.getItem("reservations")) || [];
+  saved.forEach(showReservation);
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = form.querySelector('input[placeholder="Your Name"]').value.trim();
+    const datetime = form.querySelector('input[type="datetime-local"]').value;
+    const guests = form.querySelector('input[type="number"]').value;
+
+    if (!name || !datetime || !guests) {
+      alert("Please fill all fields!");
+      return;
+    }
+
+    const newReservation = { name, datetime, guests };
+
+    // Save to local storage
+    const reservations = JSON.parse(localStorage.getItem("reservations")) || [];
+    reservations.push(newReservation);
+    localStorage.setItem("reservations", JSON.stringify(reservations));
+
+    // Show it on page
+    showReservation(newReservation);
+
+    alert("✅ Reservation stored successfully!");
+    form.reset();
+  });
+
+  function showReservation(r) {
+    const li = document.createElement("li");
+    li.textContent = `${r.name} - ${r.datetime} (${r.guests} guests)`;
+    list.appendChild(li);
+  }
 });
 </script>
+</body>
+</html>
