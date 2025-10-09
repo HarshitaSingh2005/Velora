@@ -8,7 +8,7 @@ body {
 }
 /* ===== Header / Navigation ===== */
 header {
-  background: #6f4e37;
+  background: #fdf6e3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +29,7 @@ header .logo {
 .navbar {
   width: 100%;    /* cream background */
   padding: 10px 0;
+  background-color: #6f4e37;
 }
 
 nav ul {
@@ -44,11 +45,11 @@ nav ul {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #d8dcd8;
+  color: #f2f8f2;
   font-size: 18px;
   padding: 8px 12px;
   transition: background 0.3s;
-  background-color: #fdf6e3;
+  background-color: #6f4e37;
 }
 
 .navbar ul li a:hover {

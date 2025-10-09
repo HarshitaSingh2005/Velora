@@ -1,55 +1,62 @@
 /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-/* Body Styling */
 body {
-  background-color: #f6f1ee;
-  color: #3e2723;
-  line-height: 1.6;
-  padding-bottom: 50px;
-}
-/* ===== HEADER ===== */
-header {
-  display: flex;
-  justify-content: space-between;  /* logo on left, menu on right */
-  align-items: center;
-  background-color: #000;          /* black bar */
-  padding: 15px 40px;
-  border-radius: 8px 8px 0 0;
-}
-
-/* Logo */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-}
-
-/* Navbar list styling */
-.navbar ul {
-  list-style: none;                /* remove dots */
-  display: flex;                   /* make horizontal */
-  gap: 30px;                       /* space between links */
+  font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #fdf6e3; /* Cream background */
+  color: #181717;
+}
+/* ===== Header / Navigation ===== */
+header {
+  background: #fdf6e3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 50px;
 }
 
-/* Navbar link styling */
-.navbar a {
+header .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 100px;
+}
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;    /* cream background */
+  padding: 10px 0;
+  background-color: #6f4e37;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;               
+  justify-content: center;     
+  align-items: center;         
+  gap: 30px;                   
+}
+
+
+.navbar ul li a {
   text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s;
+  color: #f2f8f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background 0.3s;
+  background-color: #6f4e37;
 }
 
-.navbar a:hover {
-  color: #d2b48c;                  /* light coffee hover color */
+.navbar ul li a:hover {
+  background: #d8dcd8;
+  border-radius: 5px;
 }
+
 
 /* Reviews Section */
 .reviews {

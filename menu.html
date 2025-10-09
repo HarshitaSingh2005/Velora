@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Velora Coffee Menu</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylemenu.css">
 </head>
 <body>
 
@@ -12,49 +12,135 @@
     <div class="logo">Velora</div>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="menu.html">Menu</a></li>
+        <li><a href="brewing.html">Brewing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="extras.html">Extras</a></li>
       </ul>
     </nav>
   </header>
+  <!-- Hero Section -->
 
-  <section class="coffee-menu">
-    <h2>Pick Your Coffee</h2>
-    
-    <!-- Coffee Options -->
-    <div class="coffee-options">
-      <div class="coffee-card" data-coffee="Espresso">
-        <h3>Espresso</h3>
-        <p>Price: $2.50</p>
-        <button class="recommend-btn">Get AI Recommendation</button>
-      </div>
-      <div class="coffee-card" data-coffee="Latte">
-        <h3>Latte</h3>
-        <p>Price: $3.50</p>
-        <button class="recommend-btn">Get AI Recommendation</button>
-      </div>
-      <div class="coffee-card" data-coffee="Cappuccino">
-        <h3>Cappuccino</h3>
-        <p>Price: $3.00</p>
-        <button class="recommend-btn">Get AI Recommendation</button>
-      </div>
-      <div class="coffee-card" data-coffee="Americano">
-        <h3>Americano</h3>
-        <p>Price: $2.80</p>
-        <button class="recommend-btn">Get AI Recommendation</button>
-      </div>
-      <div class="coffee-card" data-coffee="Mocha">
-        <h3>Mocha</h3>
-        <p>Price: $3.70</p>
-        <button class="recommend-btn">Get AI Recommendation</button>
-      </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h3>Freshly Roasted</h3>
+      <h1>COFFEE</h1>
+      <button class="shop-btn">Shop Now</button>
     </div>
-
-    <div id="recommendation" style="margin-top:20px; font-size:18px; color:#6f4e37;"></div>
   </section>
 
-  <script src="main.js"></script>
+  <!-- Top Categories -->
+
+  <section class="categories">
+    <h2>TOP CATEGORIES</h2>
+    <p>Explore The Recent Most Bought Drinks This Week</p>
+
+```
+<div class="card-container">
+  <div class="card"><img src="hotchoco.jpg" alt=""><h3>Hot Chocolate</h3></div>
+  <div class="card"><img src="espresso.jpg" alt=""><h3>Espresso Coffee</h3></div>
+  <div class="card"><img src="mocha.jpg" alt=""><h3>Mocha Coffee</h3></div>
+  <div class="card"><img src="latte.jpg" alt=""><h3>Latte Coffee</h3></div>
+    <div class="card"><img src="cappucino.jpg" alt=""><h3>Cappucino Coffee</h3></div>
+      <div class="card"><img src="americano.jpg" alt=""><h3>Americano Coffee</h3></div>
+      
+      <div class="card"><img src="Virgin Mojito.jpg" alt=""><h3>Virgin Mojito Coffee</h3></div>
+      <div class="card"><img src="Chocolate Croissant Coffee.jpg" alt=""><h3>Chocolate Croissant Coffee</h3></div>
+      <div class="card"><img src="Mint Oreo Shake.jpg" alt=""><h3>Mint Oreo Shake Coffee</h3></div>
+      <div class="card"><img src="Cafe Mocha.jpg" alt=""><h3>Cafe Mocha Coffee</h3></div>
+
+</div>
+```
+
+  </section>
+
+  <!-- Top Milkshakes -->
+
+  <section class="milkshakes">
+    <h2>TOP MILK SHAKES</h2>
+    <p>Explore The Recent Most Bought Shakes This Week</p>
+
+```
+<div class="shake-container">
+  <div class="shake-card">
+    <img src="biscoff.jpg" alt="">
+    <span class="likes">❤️ 30</span>
+    <h3>Biscoff Milkshake</h3>
+    <p>200₹</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="shake-card">
+    <img src="caramel.jpg" alt="">
+    <span class="likes">❤️ 50</span>
+    <h3>Salted Caramel Milkshake</h3>
+    <p>200₹</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="shake-card">
+    <img src="choco.jpg" alt="">
+    <span class="likes">❤️ 100</span>
+    <h3>Decadent Chocolate Milkshake</h3>
+    <p>200₹</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="shake-card">
+    <img src="milkchoco.jpg" alt="">
+    <span class="likes">❤️ 40</span>
+    <h3>Chocolate Milkshake</h3>
+    <p>200₹</p>
+    <button>Buy Now</button>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h4>Products</h4>
+        <p>Mocha Coffee</p>
+        <p>Espresso Coffee</p>
+        <p>Latte Coffee</p>
+        <p>Milk Shakes</p>
+      </div>
+
+```
+  <div>
+    <h4>Category</h4>
+    <p>Men</p>
+    <p>Women</p>
+  </div>
+
+  <div>
+    <h4>Company Info</h4>
+    <p>About Us</p>
+    <p>Contact Us</p>
+    <p>Support</p>
+  </div>
+
+  <div>
+    <h4>Follow Us</h4>
+    <div class="socials">
+      <a href="#"><img src="insta.png" alt=""></a>
+      <a href="#"><img src="fb.png" alt=""></a>
+      <a href="#"><img src="yt.png" alt=""></a>
+    </div>
+  </div>
+</div>
+<p class="copyright">© 2025 Velora Coffee | All Rights Reserved</p>
+```
+
+  </footer>
+
 </body>
 </html>
