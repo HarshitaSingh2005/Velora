@@ -1,12 +1,12 @@
-/* General Reset */
-* {
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  background-color: #fdf6e3; /* Cream background */
+  color: #181717;
 }
-
-/* Body Styling */
+/* ===== Header / Navigation ===== */
 header {
   background: #fdf6e3;
   display: flex;
@@ -20,10 +20,10 @@ header {
 }
 
 header .logo {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 100px;
+  color: #111111;    
+  /* cream background */
+  padding: 10px 0;
+
 }
 /* ===== Navbar ===== */
 .navbar {
@@ -59,40 +59,42 @@ nav ul {
 
 
 /* ===== Hero Section ===== */
-.Contact {
-    background-image: url('../Ccon.jpg'); /* image must be in same folder as CSS */
-     height: 1000px; 
+.hero {
+    height: 1000px; 
+    background-image: url('../aboutl.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex; 
     align-items: center;         /* vertical center */
     justify-content: flex-end;   /* push content to right */
-    padding-right: 50px;    
+    padding-right: 50px;         /* spacing from right edge */
 }
 
-.Contact-text {
-  max-width: 1000px;
-  text-align: center;
-    margin: 0 auto;  
-      height: 100vh;             /* makes it full viewport height */
-  display: flex;             /* enables flexbox for vertical centering */
-  flex-direction: column;    /* keeps items stacked top-to-bottom */
-  justify-content: center;   /* vertical center */
-  align-items: center;         /* centers the whole box horizontally */
-
-}
-
-.Contact-text h1 {
-  font-size: 100px;
-  color: #ffffff;
-  margin-top: 20px;
-  font-weight: 200;  
-  font-family: poppins;
+.hero-text {
+    width: 50%;
+    text-align: left;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 80px;   /* pushes the text down */
 }
 
 
-.Contact-img {
+.hero-text h1 {
+    font-size: 42px;
+    color: #6f4e37;
+    margin-bottom:20px;
+     margin-top: 5px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #715A5A;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-img {
       width: auto;       /* original laptop width */
     height: auto;      /* original laptop height */
     max-width: 100%;     /* scales down on smaller screens */
@@ -100,48 +102,56 @@ nav ul {
     display: block;      /* removes inline spacing */
     object-fit: cover;  
 }
+
+/* ===== Coffee Types Section ===== */
+.coffee-types {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.coffee-types h2 {
+  font-size: 36px;
+  color: #6f4e37;
+  margin-bottom: 40px;
+}
+.coffee-row {
+  display: flex;
+  flex-wrap: wrap;          /* ✅ allows wrapping */
+  justify-content: center;  /* ✅ centers cards */
+  gap: 20px;                /* ✅ spacing between cards */
+}
+.coffee-card {
+  flex: 1 1 200px;   /* ✅ each card at least 200px, will shrink/grow */
+  max-width: 220px;  /* ✅ keeps cards from being too wide */
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.coffee-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.coffee-card:hover {
+  transform: translateY(-5px);
+}
+
+.coffee-card h3 {
+  margin-top: 15px;
+  color: #6f4e37;
+}
+
+/* ===== Footer ===== */
 footer {
   background: #6f4e37;
-  color: #532000;
+  color: #fff;
   text-align: center;
   padding: 20px;
-}
-
-.hero {    /* Dark background */
-  height: 100vh;                 /* Full screen height */
-  display: flex;                 
-  justify-content: center;       /* Centers horizontally */
-  align-items: center;           /* Centers vertically */
-  padding: 0 20px;               /* Little space on sides for small screens */
-}
-
-.hero-text {
-  max-width: 850px;
-  text-align: center;           /* Center text */
-  color: #fcf9f6;
-  font-weight: 200px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  font-size: 18px;
-  margin: 10px 0;
-  line-height: 1.6;
-}
-
-.hero-text a {
-  color: #6f4e37;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.hero-text a:hover {
-  text-decoration: underline;
 }
 
 /* ===== Responsive ===== */
@@ -156,106 +166,4 @@ footer {
   .hero-text {
     text-align: center;
   }
-}
-/* Make icons larger */
-.info-box p {
-  font-size: 20px;
-}
-
-.info-box p:first-child {
-  font-size: 28px; /* Makes the icon itself look bigger */
-}
-
-/* Bring reservation section closer */
-.get-in-touch {
-  padding-bottom: 40px;
-}
-.reservation {
-  background-color: #fff;
-  color: #333;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.reservation h2 {
-  font-size: 36px;
-  color: #6f4e37;
-  margin-bottom: 40px;
-}
-
-#reservation-form {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  max-width: 450px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#reservation-form label {
-  text-align: left;
-  font-weight: 600;
-  color: #6f4e37;
-}
-
-#reservation-form input {
-  padding: 10px 15px;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
-
-#reservation-form input:focus {
-  outline: none;
-  border-color: #6f4e37;
-}
-
-#reservation-form button {
-  background-color: #6f4e37;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 12px 0;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-#reservation-form button:hover {
-  background-color: #5b3e2e;
-  transform: translateY(-2px);
-}
-.reservation h3 {
-  margin-top: 30px;
-  font-size: 22px;
-  color: #4b2e05;
-  border-top: 2px solid #c5a572;
-  padding-top: 15px;
-}
-
-#reservation-list {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 15px;
-}
-
-#reservation-list li {
-  background: #fff3df;
-  border: 1px solid #e1c69b;
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin: 8px 0;
-  color: #3b2405;
-  font-size: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-#reservation-list li:hover {
-  transform: scale(1.03);
 }

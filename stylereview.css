@@ -6,7 +6,176 @@ body {
   background-color: #fdf6e3; /* Cream background */
   color: #181717;
 }
+/* ===== Header / Navigation ===== *//* ===== Global Styles ===== */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6e3; /* Cream background */
+  color: #181717;
+}
 /* ===== Header / Navigation ===== */
+header {
+  background: #fdf6e3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 50px;
+}
+
+header .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 100px;
+}
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;    /* cream background */
+  padding: 10px 0;
+  background-color: #6f4e37;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;               
+  justify-content: center;     
+  align-items: center;         
+  gap: 30px;                   
+}
+
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #f2f8f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background 0.3s;
+  background-color: #6f4e37;
+}
+
+.navbar ul li a:hover {
+  background: #d8dcd8;
+  border-radius: 5px;
+}
+
+
+/* ===== Hero Section ===== */
+.hero {
+    height: 1000px; 
+    background-image: url('../aboutl.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex; 
+    align-items: center;         /* vertical center */
+    justify-content: flex-end;   /* push content to right */
+    padding-right: 50px;         /* spacing from right edge */
+}
+
+.hero-text {
+    width: 50%;
+    text-align: left;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 80px;   /* pushes the text down */
+}
+
+
+.hero-text h1 {
+    font-size: 42px;
+    color: #6f4e37;
+    margin-bottom:20px;
+     margin-top: 5px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #715A5A;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-img {
+      width: auto;       /* original laptop width */
+    height: auto;      /* original laptop height */
+    max-width: 100%;     /* scales down on smaller screens */
+    height: auto;        /* keeps aspect ratio */
+    display: block;      /* removes inline spacing */
+    object-fit: cover;  
+}
+
+/* ===== Coffee Types Section ===== */
+.coffee-types {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.coffee-types h2 {
+  font-size: 36px;
+  color: #6f4e37;
+  margin-bottom: 40px;
+}
+.coffee-row {
+  display: flex;
+  flex-wrap: wrap;          /* ✅ allows wrapping */
+  justify-content: center;  /* ✅ centers cards */
+  gap: 20px;                /* ✅ spacing between cards */
+}
+.coffee-card {
+  flex: 1 1 200px;   /* ✅ each card at least 200px, will shrink/grow */
+  max-width: 220px;  /* ✅ keeps cards from being too wide */
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.coffee-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.coffee-card:hover {
+  transform: translateY(-5px);
+}
+
+.coffee-card h3 {
+  margin-top: 15px;
+  color: #6f4e37;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #6f4e37;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
+
 header {
   background: #fdf6e3;
   display: flex;
